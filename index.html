@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Cocosor</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+      .active{
+        background-color: rgb(243 244 246);
+        border-radius: 8px;
+        color: white;
+      }
+      section.my-alert {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--tw-color-gray-50) / var(--tw-bg-opacity));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.my-alert > div {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--tw-color-white) / var(--tw-bg-opacity));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: var(--tw-border-radius-md);
+  width: 40%;
+  padding: var(--tw-size-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.my-alert > div > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.my-alert > div > div > img {
+  width: var(--tw-size-56);
+  /* Unknown class .h-25 */
+}
+
+section.my-alert > div > form {
+  padding-left: var(--tw-size-8);
+  padding-right: var(--tw-size-8);
+  padding-top: var(--tw-size-8);
+}
+
+section.my-alert > div > form > div.my-alert__unique1 {
+  margin-bottom: var(--tw-size-4);
+}
+
+section.my-alert > div > form > div > label {
+  display: block;
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-700) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-sm);
+  line-height: var(--tw-line-height-5);
+  font-weight: var(--tw-font-weight-bold);
+  margin-bottom: var(--tw-size-2);
+}
+
+section.my-alert > div > form > div > input.my-alert__unique3 {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-width: 1px;
+  border-radius: var(--tw-border-radius-default);
+  width: 100%;
+  padding-top: var(--tw-size-2);
+  padding-bottom: var(--tw-size-2);
+  padding-left: var(--tw-size-3);
+  padding-right: var(--tw-size-3);
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-700) / var(--tw-text-opacity));
+  line-height: var(--tw-line-height-tight);
+}
+
+section.my-alert > div > form > div > input.my-alert__unique3:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* Unknown class .shadow-outline */
+}
+
+section.my-alert > div > form > div.my-alert__unique2 {
+  margin-bottom: var(--tw-size-6);
+}
+
+section.my-alert > div > form > div > input.my-alert__unique4 {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-width: 1px;
+  border-radius: var(--tw-border-radius-default);
+  width: 100%;
+  padding-top: var(--tw-size-2);
+  padding-bottom: var(--tw-size-2);
+  padding-left: var(--tw-size-3);
+  padding-right: var(--tw-size-3);
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-700) / var(--tw-text-opacity));
+  margin-bottom: var(--tw-size-3);
+  line-height: var(--tw-line-height-tight);
+}
+
+section.my-alert > div > form > div > input.my-alert__unique4:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* Unknown class .shadow-outline */
+}
+
+section.my-alert > div > form > div > div {
+  display: flex;
+  align-items: flex-start;
+}
+
+section.my-alert > div > form > div > div > div.my-alert__unique5 {
+  display: flex;
+  align-items: center;
+  height: var(--tw-size-5);
+}
+
+section.my-alert > div > form > div > div > div > input {
+  width: var(--tw-size-4);
+  height: var(--tw-size-4);
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--tw-color-gray-300) / var(--tw-border-opacity));
+  border-radius: var(--tw-border-radius-default);
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--tw-color-gray-50) / var(--tw-bg-opacity));
+}
+
+section.my-alert > div > form > div > div > div.my-alert__unique6 {
+  margin-left: var(--tw-size-3);
+  font-size: var(--tw-font-size-sm);
+  line-height: var(--tw-line-height-5);
+}
+
+section.my-alert > div > form > div > div > div > label {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-500) / var(--tw-text-opacity));
+}
+
+:is(.dark section.my-alert > div > form > div > div > div > label) {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-300) / var(--tw-text-opacity));
+}
+
+section.my-alert > div > form > div.my-alert__unique7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.my-alert > div > form > div > button {
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--tw-color-gray-500) / var(--tw-bg-opacity));
+}
+
+section.my-alert > div > form > div > button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--tw-color-gray-700) / var(--tw-bg-opacity));
+}
+
+section.my-alert > div > form > div > button {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+  font-weight: var(--tw-font-weight-bold);
+  padding-top: var(--tw-size-2);
+  padding-bottom: var(--tw-size-2);
+  padding-left: var(--tw-size-4);
+  padding-right: var(--tw-size-4);
+  border-radius: var(--tw-border-radius-default);
+}
+
+section.my-alert > div > form > div > button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* Unknown class .shadow-outline */
+}
+
+section.my-alert > div > form > div.my-alert__unique8 {
+  padding-top: var(--tw-size-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.my-alert > div > form > div > p {
+  font-size: var(--tw-font-size-sm);
+  line-height: var(--tw-line-height-5);
+  font-weight: var(--tw-font-weight-light);
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-500) / var(--tw-text-opacity));
+}
+
+:is(.dark section.my-alert > div > form > div > p) {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-gray-400) / var(--tw-text-opacity));
+}
+
+section.my-alert > div > form > div > p > a {
+  font-weight: var(--tw-font-weight-medium);
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-primary-600) / var(--tw-text-opacity));
+}
+
+section.my-alert > div > form > div > p > a:hover {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+:is(.dark section.my-alert > div > form > div > p > a) {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-primary-500) / var(--tw-text-opacity));
+}
+    </style>
+</head>
+<body class="min-h-screen pt-14 px-15 bg-gray-50">
+
+    <section class="bg-gray-50 flex items-center justify-center">
+        <div class="bg-white shadow-lg rounded-md w-2/5 p-10 flex flex-col justify-center">
+            <div class="w-full flex justify-center">
+                <img src="logo.png" alt="" class="w-56 h-25">
+            </div>
+            <form action="/login/process" method="POST"  class="px-8 pt-8">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                        Username
+                    </label>
+                    <input name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input id="show-password" aria-describedby="show-password" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50">
+                        </div>
+                        <div class="ml-3 text-sm">
+                          <label for="show-password" class="text-gray-500 dark:text-gray-300">Show Password</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="w-full bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Sign In
+                    </button>
+                </div>
+                <div class="pt-6 flex items-center justify-center">
+                    <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                        Don’t have an account yet? <a href="/register" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <x-messages />
+    <script>
+        const passwordInput = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('show-password');
+    
+        showPasswordCheckbox.addEventListener('change', () => {
+            passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>
